@@ -43,7 +43,7 @@ const Index = () => {
             </div>
             <div className="flex items-center gap-4">
               <a 
-                href="https://t.me/alexxand_err" 
+                href="https://t.me/alexxand_er" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
