@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
@@ -9,6 +10,8 @@ import { Progress } from '@/components/ui/progress';
 import Icon from '@/components/ui/icon';
 
 const Index = () => {
+  const { id } = useParams();
+  const navigate = useNavigate();
   const [lightLevel, setLightLevel] = useState(75);
   const [wateringTime, setWateringTime] = useState('08:00');
   const [wateringDuration, setWateringDuration] = useState(15);
@@ -37,9 +40,19 @@ const Index = () => {
       <div className="container mx-auto p-6 max-w-7xl">
         <header className="mb-8 animate-fade-in">
           <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-4xl font-bold text-white mb-2">Агропрорыв</h1>
-              <p className="text-slate-400">Система мониторинга теплиц</p>
+            <div className="flex items-center gap-4">
+              <Button 
+                variant="outline" 
+                size="icon"
+                className="bg-slate-800 border-slate-700 hover:bg-slate-700"
+                onClick={() => navigate('/')}
+              >
+                <Icon name="ArrowLeft" size={20} className="text-white" />
+              </Button>
+              <div>
+                <h1 className="text-4xl font-bold text-white mb-2">Агропрорыв</h1>
+                <p className="text-slate-400">Система мониторинга теплиц</p>
+              </div>
             </div>
             <div className="flex items-center gap-4">
               <a 
@@ -53,10 +66,10 @@ const Index = () => {
               </a>
               <div className="text-right">
                 <p className="text-sm text-slate-400">Теплица</p>
-                <p className="text-lg font-semibold text-white">№ 01-A</p>
+                <p className="text-lg font-semibold text-white">№ {id}</p>
               </div>
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">
-                <Icon name="User" className="text-white" size={24} />
+                <Icon name="Sprout" className="text-white" size={24} />
               </div>
             </div>
           </div>
