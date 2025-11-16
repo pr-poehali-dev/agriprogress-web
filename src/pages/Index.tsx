@@ -42,6 +42,15 @@ const Index = () => {
               <p className="text-slate-400">Система мониторинга теплиц</p>
             </div>
             <div className="flex items-center gap-4">
+              <a 
+                href="https://t.me/alexxand_err" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
+              >
+                <Icon name="MessageCircle" size={18} className="text-white" />
+                <span className="text-sm text-white font-medium">Поддержка</span>
+              </a>
               <div className="text-right">
                 <p className="text-sm text-slate-400">Теплица</p>
                 <p className="text-lg font-semibold text-white">№ 01-A</p>
